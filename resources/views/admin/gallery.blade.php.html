@@ -1,0 +1,207 @@
+
+
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/all.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+<title>Gallery </title>
+</head>
+<body><html lang="ar" dir="rtl">
+<style>
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+}
+
+.navbar-brand {
+font-weight: bold;
+font-size: 1.8rem;
+}
+
+
+
+footer {
+background-color: #1a1a1a;
+color: white;
+}
+
+.social-icons a {
+color: white;
+font-size: 1.5rem;
+margin-left: 15px;
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-info me-2" href="#">كرم</a>
+
+<form class="d-flex me-4 ">
+{!! csrf_field() !!}
+        <input class="form-control " type="search" placeholder="ابحث...">
+            <button class="btn btn-outline-primary" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+     
+</form>
+<button class="navbar-toggler" type="button" 
+data-bs-toggle="collapse" 
+data-bs-target="#navbarNav"
+aria-label=" Dooney_nav"
+aria-controls="navbarNav"
+aria-expanded="false"
+>
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+<li class="nav-item active">
+<a class="nav-link active" href="#">الرئيسية</a>
+</li>
+<li  class="nav-item active">
+                                        <a  class="nav-link active"  href="{{ aurl('books') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('books-form').submit();">
+                                            الكتب
+                                        </a>
+      <form id="books-form" action="{{ aurl('books') }}" >
+                                            {{ csrf_field() }}
+                                        </form>
+                                        </li>
+
+
+                                       
+
+
+                                        <li  class="nav-item active">
+                                        <a  class="nav-link active"  href="{{ aurl('novels') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('novels-form').submit();">
+                                            الروايات
+                                        </a>
+      <form id="novels-form" action="{{ aurl('novels') }}">
+                                            {{ csrf_field() }}
+                                        </form></li> 
+
+
+
+                                        <li  class="nav-item active">
+                                        <a  class="nav-link active"  href="{{ aurl('images') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('images-form').submit();">
+                                            الصور
+                                        </a>
+      <form id="images-form" action="{{ aurl('images')}}" method="post">
+                                            {{ csrf_field() }}
+                                        </form></li>
+
+
+
+
+
+
+
+
+
+              
+                                        <li class="nav-item active ">
+<a class="nav-link active" href="#" id="showAlert">من نحن</a>
+
+                                        <div class="alert alert-info  dismissible fade show d-none position-fixed top-0 start-0 w-100" roll="alert" id="myAlert">
+                                          <h4 class="alert-heading"> من نحن</h4>
+                                          <p>مكتبة كرم هي مكتبة متخصصة في الكتب الثقافية والروايات الادبية وكل ما يتعلق بالكتب من صور واقتباسات وغيرها .
+                  قام بتصميم هذه المكتبة كل من إكرام ادم ومحمد رابح.</p>        
+                                        <button class="btn-close" data-bs-dismiss="alert" aria-lable="Close"  type="button"></button>
+                                        </div>
+</li>
+
+  
+
+
+<li class="nav-item active">
+<a class="nav-link active" href="{{ aurl('logout') }}"
+                                                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            تسجيل خروج
+                                        </a>
+                                        <form id="logout-form" action="{{ aurl('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form></li>
+                      
+
+
+
+
+
+    </ul>
+  </li>
+  </li>
+</div>
+</div>
+</nav>
+
+<title>images</title>
+</head>
+
+<body>
+
+
+<body>
+  
+    <section class="gallery min-vh-100">
+    <div class="container-lg">
+      <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <dev class="col">
+          <img src="image/1.jpg"alt="gallery"class="gallery-item">
+          <img src="image/2.jpg"alt="gallery"class="gallery-item">
+          <img src="image/3.jpg"alt="gallery"class="gallery-item">
+          <img src="image/4.jpg"alt="gallery"class="gallery-item">
+          <img src="image/5.jpg"alt="gallery"class="gallery-item">
+          <img src="image/6.jpg"alt="gallery"class="gallery-item">
+          <img src="image/7.jpg"alt="gallery"class="gallery-item">
+          <img src="image/8.jpg"alt="gallery"class="gallery-item">
+          <img src="image/9.jpg"alt="gallery"class="gallery-item">
+          <img src="image/10.jpg"alt="gallery"class="gallery-item">
+          <img src="image/11.jpg"alt="gallery"class="gallery-item">
+          <img src="image/12.jpeg"alt="gallery"class="gallery-item">
+          <img src="image/13.jpeg"alt="gallery"class="gallery-item">
+          <img src="image/14.jpeg"alt="gallery"class="gallery-item">
+          <img src="image/15.jpg"alt="gallery"class="gallery-item">
+          <img src="image/16.jpg"alt="gallery"class="gallery-item">
+          <img src="image/17.jpg"alt="gallery"class="gallery-item">
+          <img src="image/18.jpg"alt="gallery"class="gallery-item">
+          <img src="image/19.jpg"alt="gallery"class="gallery-item">
+          <img src="image/20.jpg"alt="gallery"class="gallery-item">
+          <img src="image/21.jpg"alt="gallery" class="gallery-item">
+          </div>
+       </div>  
+    </div>
+    </section>
+    
+    <div class="modal fade" id="gallery-modal" tabindex="-1"
+    aria-labelledby="examplemodallable" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="image/1.jpg"alt="modal img"class="modal-img"> </div>
+    </div>
+  </div>
+</div>
+  
+  <script src="js/main.js"></script>
+
+  <script src="js/bootstrap.bundle.main.js"></script>
+</body>
+</html>
