@@ -53,7 +53,7 @@
 @endforeach
 </div>
 @endif 
-    <p class="login-box-msg">Wellcom to you ower vistor </p>
+    <p class="login-box-msg">Wellcom to you our vistor </p>
 
     <form method="post">
       {!! csrf_field() !!}
