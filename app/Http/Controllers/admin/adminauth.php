@@ -65,14 +65,17 @@ class adminauth extends Controller
 
 
         public function dologin(){
+           $validate = $this->validate(request(),[
+                'email' => 'required|string|email',
+            'password' => 'required',
+        ]);
             $rememberme=request('rememberme')==1 ?true:false;
             if (admin()->attempt(['email'=>request('email'),'password'=>request('password')],$rememberme)){
 
                 return redirect('admin');
             }
             else{
-                session()->flash('error', trans('admin.inccorrect_information_login'));
-                return redirect(aurl('login'));
+               return back()->withErrors('invalid Email Or Password ');
 
             }
             
