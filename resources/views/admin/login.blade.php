@@ -44,14 +44,15 @@
 
 
   <!-- /.login-logo -->
-  @if($errors->any())
+
+  <div class="login-box-body">
+      @if($errors->any())
     <div style="color:red">
 @foreach($errors->all() as $error)
 <p>{{$error}}</p>
 @endforeach
 </div>
 @endif 
-  <div class="login-box-body">
     <p class="login-box-msg">Wellcom to you ower vistor </p>
 
     <form method="post">
