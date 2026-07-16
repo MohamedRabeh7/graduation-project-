@@ -162,6 +162,9 @@ margin-left: 15px;
                     </div>
 
                     <button type="submit" class="btn btn-sky-blue w-100">تسجيل</button>
+                      <a href="{{ aurl('login') }}">Sign in</a><br>
+
+        
                 </form>
             </div>
         </div>
